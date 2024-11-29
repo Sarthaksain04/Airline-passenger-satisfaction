@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey and Feedback Results</title>
+    <style>
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom right, #f4f7fc, #e7ebf5);
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2, h3 {
+            color: #4f46e5;
+            margin-bottom: 20px;
+        }
+        .result-box {
+            padding: 20px;
+            background-color: #e0f7fa;
+            border: 2px solid #4f46e5;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .result-box h3 {
+            font-size: 1.6rem;
+            color: #00796b;
+        }
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .card {
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            width: calc(50% - 20px);
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Survey Results for {{ email }}</h2>
+
+        <div class="result-box">
+            <h3>Feedback Prediction</h3>
+            <p>Your satisfaction level: <strong>{{ prediction }}</strong></p>
+        </div>
+
+        <h3>Filtered Data from Dataset:</h3>
+        <div class="card-container">
+            {% for row in table_rows %}
+            <div class="card">
+                <h4>User Information</h4>
+                <p><strong>Gender:</strong> {{ row[0] }}</p>
+                <p><strong>Customer Type:</strong> {{ row[1] }}</p>
+                <p><strong>Age:</strong> {{ row[2] }}</p>
+                <p><strong>Type of Travel:</strong> {{ row[3] }}</p>
+                <p><strong>Class:</strong> {{ row[4] }}</p>
+                <p><strong>Flight Distance:</strong> {{ row[5] }}</p>
+                <p><strong>Inflight Wifi Service:</strong> {{ row[6] }}</p>
+                <p><strong>Seat Comfort:</strong> {{ row[7] }}</p>
+                <p><strong>Food & Drink:</strong> {{ row[8] }}</p>
+                <p><strong>Inflight Entertainment:</strong> {{ row[9] }}</p>
+                <p><strong>Ground Service:</strong> {{ row[10] }}</p>
+                <p><strong>Cabin Crew Service:</strong> {{ r11] }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

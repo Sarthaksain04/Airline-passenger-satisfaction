@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Satisfaction Survey</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(120deg, #f3f4f6, #dae2ff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .form-container {
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+      width: 72%;
+      max-width: 800px;
+      overflow-y: auto;
+      margin-top: 45px;
+      margin-bottom: 45px;
+    }
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    .form-group label {
+      width: 150px;
+      margin-right: 10px;
+      color: #555;
+      font-weight: bold;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .form-group textarea {
+      resize: none;
+      height: 80px;
+    }
+    .form-group button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      width: 100%;
+    }
+    .form-group button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Customer Satisfaction Survey</h2>
+    <form action="/submit" method="post">
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="gender">Gender:</label>
+        <select name="gender" id="gender" required>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="age">Age:</label>
+        <input type="number" name="age" id="age" required>
+      </div>
+
+      <div class="form-group">
+        <label for="type-of-travel">Type of Travel:</label>
+        <select name="type-of-travel" id="type-of-travel" required>
+          <option value="Business">Business</option>
+          <option value="Personal">Personal</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="class">Class:</label>
+        <select name="class" id="class" required>
+          <option value="Economy">Economy</option>
+          <option value="Business">Business</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="wifi-service">Wifi Service:</label>
+        <input type="number" name="wifi-service" id="wifi-service" required>
+      </div>
+
+      <div class="form-group">
+        <label for="seat-comfort">Seat Comfort:</label>
+        <input type="number" name="seat-comfort" id="seat-comfort" required>
+      </div>
+
+      <div class="form-group">
+        <label for="food-drink">Food & Drink:</label>
+        <input type="number" name="food-drink" id="food-drink" required>
+      </div>
+
+      <div class="form-group">
+        <label for="entertainment">Entertainment:</label>
+        <input type="number" name="entertainment" id="entertainment" required>
+      </div>
+
+      <div class="form-group">
+        <label for="ground-service">Ground Service:</label>
+        <input type="number" name="ground-service" id="ground-service" required>
+      </div>
+
+      <div class="form-group">
+        <label for="cabin-crew-service">Cabin Crew Service:</label>
+        <input type="number" name="cabin-crew-service" id="cabin-crew-service" required>
+      </div>
+
+      <div class="form-group">
+        <label for="arrival-delay">Arrival Delay (minutes):</label>
+        <input type="number" name="arrival-delay" id="arrival-delay" required>
+      </div>
+
+      <div class="form-group">
+        <button type="submit">Submit Feedback</button>
+      </div>
+    </form>
+  </div>
+
+</body>
+</html>

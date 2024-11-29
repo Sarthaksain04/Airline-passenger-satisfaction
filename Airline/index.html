@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.46/build/spline-viewer.js"></script>
+
+  <title>Airplane Window Experience</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+      overflow-x: hidden;
+      background-size: cover;
+    }
+
+    .container {
+      background-color: #80C4E9;
+      height: 130vh;
+      width: 100%;
+      position: fixed;
+      margin-top: -50px;
+    }
+
+    .container img {
+      width: 100%;
+    }
+
+    .container .cloud1 {
+      animation: cloud infinite 30s linear;
+    }
+
+    .container .cloud2 {
+      position: absolute;
+      top: 20px;
+      animation: cloud infinite 45s linear;
+    }
+
+    .container .cloud3 {
+      position: absolute;
+      top: -60px;
+      animation: cloud infinite 50s linear;
+    }
+
+    .container .cloud4 {
+      position: absolute;
+      top: 30px;
+      animation: cloud infinite 60s linear;
+    }
+
+    @keyframes cloud {
+      0% {
+        transform: translateX(-100%);
+      }
+      100% {
+        transform: translateX(100%);
+      }
+    }
+
+    .feedback-section {
+      position: absolute;
+      top: 550px;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      z-index: 1;
+      color: #333;
+    }
+
+    .feedback-section h1 {
+      font-size: 1.7rem;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .feedback-section p {
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .feedback-button {
+      background: #1e90ff;
+      color: #fff;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .feedback-button:hover {
+      background: #007acc;
+    }
+
+    spline-viewer {
+      display: block;
+      width: 100%;
+      height: 400px; /* Adjust height as needed */
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container"> 
+    <div class="cloud1"><img src="./images/cloud1.png"></div>
+    <div class="cloud2"><img src="./images/cloud2.png"></div>
+    <div class="cloud3"><img src="./images/cloud1.png"></div>
+    <div class="cloud4"><img src="./images/cloud2.png"></div>
+  </div> 
+
+  <!-- Spline Viewer Section -->
+
+  <div class="feedback-section">
+    <h1>Customer Satisfaction</h1>
+    <p>We value your feedback.<br> Let us know about your experience!</p>
+    <button class="feedback-button" onclick="window.location.href='templates/feedbackform.html'">Give Feedback</button>
+  </div> 
+
+  <div class="image-container">
+    <img src="./images/frame.jpg" alt="Sample Description" class="custom-image">
+  </div>
+  
+  <style>
+    .image-container {
+      position: fixed;
+      margin-left: 465px;
+      margin-top: 50px;
+    }
+  
+    .custom-image {
+      width: 600px; 
+      height: 700px; 
+      
+    }
+  </style>
+  
+
+</body>
+</html>
